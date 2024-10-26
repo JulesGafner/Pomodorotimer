@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer & To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="timer-section">
+            <h2>Pomodoro Timer</h2>
+            
+            <div class="timer-settings">
+                <label for="timer-input">Timer (Minuten):</label>
+                <input type="number" id="timer-input" min="5" step="5" value="25">
+            </div>
+
+            <label for="ringtone-select">Klingelton auswählen:</label>
+            <select id="ringtone-select">
+                <option value="alarm1.mp3">Klingelton 1</option>
+                <option value="alarm2.mp3">Klingelton 2</option>
+                <option value="alarm3.mp3">Klingelton 3</option>
+            </select>
+
+            <button id="start-timer">Start</button>
+            <button id="stop-timer">Stopp</button>
+            <button id="reset-timer">Zurücksetzen</button>
+
+            <div id="timer-display">00:00</div>
+        </div>
+
+        <div id="todo-section">
+            <h2>To-Do Liste</h2>
+            <input type="text" id="todo-input" placeholder="Neue Aufgabe hinzufügen">
+            
+            <label for="todo-color">Farbe auswählen:</label>
+            <select id="todo-color">
+                <option value="green">Grün</option>
+                <option value="red">Rot</option>
+                <option value="blue">Blau</option>
+                <option value="orange">Orange</option>
+                <option value="yellow">Gelb</option>
+            </select>
+
+            <button id="add-todo">Hinzufügen</button>
+            <button id="clear-todos">Liste leeren</button>
+
+            <ul id="todo-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
